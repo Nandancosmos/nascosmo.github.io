@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Dark Energy and Modified Gravity Topical Group website concept at CTPNP, Mahidol University.">
+<title>Dark Energy & Modified Gravity | CTPNP · Mahidol University</title>
+<style>
+html {scroll-behavior:smooth;} body {margin:0;background:#fff;}
+/* CTPNP Dark Energy & Modified Gravity topical group — scoped styles */
+.demg-root { --navy:#0d2038; --ink:#172940; --muted:#5f7085; --blue:#215a9a; --sky:#5aa8d9; --gold:#b89557; --paper:#f5f7fb; --line:#dfe7f1; --white:#fff; font-family:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color:var(--ink); background:#fff; font-size:16px; line-height:1.63; -webkit-font-smoothing:antialiased; }
+.demg-root * { box-sizing:border-box; }
+.demg-root a { color:inherit; text-decoration:none; }
+.demg-root a:focus-visible { outline:3px solid #75bee9; outline-offset:4px; border-radius:3px; }
+.demg-root button {font:inherit;}
+.demg-root svg {display:block; max-width:100%;}
+.demg-root .container { width:min(1140px, calc(100% - 52px)); margin:auto; }
+.demg-root .demo-notice { background:#fff5de; color:#71501b; border-bottom:1px solid #e9d9b7; font-size:12px; font-weight:600; text-align:center; padding:7px 15px; letter-spacing:.025em; }
+.demg-root .topline { background:#0b1a2e; color:#dbe6f3; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+.demg-root .topline .container { display:flex; justify-content:space-between; gap:18px; padding:9px 0; }
+.demg-root .topline a { color:#e9eff8; }
+.demg-root .navigation { background:#fff; border-bottom:1px solid #e7edf3; }
+.demg-root .navinner {display:flex; align-items:center; justify-content:space-between; gap:26px; min-height:83px;}
+.demg-root .logoarea {display:flex; align-items:center; gap:13px; min-width:0;}
+.demg-root .monogram {width:46px; height:46px; border:1.5px solid #cddce9; background:linear-gradient(140deg,#edf4fb,#fafcff); display:grid; place-items:center; border-radius:8px; color:#1b4c85; font-family:Georgia,serif; font-size:27px; flex-shrink:0; }
+.demg-root .brand-main {font-size:17px; font-weight:800; letter-spacing:.06em; line-height:1.1; color:#153a69;}
+.demg-root .brand-sub {font-size:11px; color:#708198; line-height:1.5; margin-top:2px;}
+.demg-root .navlinks { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:clamp(12px,2vw,29px); font-size:13px; font-weight:650; }
+.demg-root .navlinks a { color:#304961; padding:8px 0; }
+.demg-root .navlinks a:hover { color:#15569b; }
+.demg-root .navlinks .nav-contact {background:#1a4b80;color:white;padding:11px 17px;border-radius:6px;white-space:nowrap;}
+.demg-root .navlinks .nav-contact:hover{background:#113963;color:#fff;}
+.demg-root .hero {position:relative; background: radial-gradient(circle at 85% 15%, rgba(59,126,184,.22), transparent 33%), linear-gradient(125deg,#08182a,#0d2b4d 57%,#123b62); overflow:hidden; color:white;}
+.demg-root .hero:before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.24; background-image:radial-gradient(circle,#d4e8fa 1px,transparent 1.5px),radial-gradient(circle,#c5e7fe .7px,transparent 1.5px);background-size:113px 125px,161px 179px;background-position:20px 45px,80px 23px; }
+.demg-root .hero-inner {position:relative; display:grid; grid-template-columns:1.07fr .93fr; gap:62px; align-items:center; padding:95px 0 104px;}
+.demg-root .eyebrow {display:flex; align-items:center; gap:11px; margin:0 0 25px; text-transform:uppercase; letter-spacing:.20em; font-size:11px; font-weight:800; color:#8bd1ee; }
+.demg-root .eyebrow:before {content:""; display:block; width:33px; height:1px; background:#b6a172; }
+.demg-root h1, .demg-root h2, .demg-root h3, .demg-root p {margin-top:0;}
+.demg-root h1 {font-family:Georgia,"Times New Roman",serif;font-size:clamp(43px,5.2vw,72px); font-weight:500;line-height:1.11;letter-spacing:-.037em;margin-bottom:23px;}
+.demg-root .hero-intro {color:#bbd1e7;font-size:17px;max-width:570px; line-height:1.79;margin-bottom:31px;}
+.demg-root .hero-actions {display:flex;gap:13px; flex-wrap:wrap; align-items:center;}
+.demg-root .btn {display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:5px;font-weight:750;font-size:13px;line-height:1.4;transition:transform .15s,background .15s;}
+.demg-root .btn:hover {transform:translateY(-2px);}
+.demg-root .btn-light {background:#e6f3fa;color:#173b61;}
+.demg-root .btn-outline {border:1px solid #7794b3;color:#eff8ff;}
+.demg-root .btn-navy {background:#1e5187;color:white;}
+.demg-root .science-panel {border:1px solid rgba(164,203,237,.24); background:linear-gradient(160deg,rgba(14,44,72,.89),rgba(5,21,40,.83)); border-radius:16px; box-shadow:0 24px 90px rgba(0,0,0,.21); padding:26px 27px 23px;position:relative;}
+.demg-root .science-panel:after {position:absolute;content:"";border:1px solid rgba(107,171,218,.13);border-radius:50%;width:280px;height:280px;right:-90px;top:-100px;pointer-events:none;}
+.demg-root .panel-kicker {display:flex;justify-content:space-between;gap:12px;color:#8ecbe8;font-size:10px;text-transform:uppercase;letter-spacing:.17em;font-weight:750;margin:0 0 13px;}
+.demg-root .panel-title {font-family:Georgia,serif;line-height:1.25;font-size:23px;color:#fff;margin-bottom:20px;max-width:360px;}
+.demg-root .chart-visual {background:rgba(3,16,31,.52); border:1px solid rgba(162,203,235,.12); border-radius:8px; padding:8px 8px 4px;}
+.demg-root .plot-note {margin:9px 0 0;color:#adc3d7;font-size:11px;}
+.demg-root .data-pills {display:flex;gap:8px;flex-wrap:wrap;margin-top:21px;}
+.demg-root .data-pills span {border:1px solid #365a78;color:#b6d4e7;padding:5px 9px;border-radius:3px;font-size:10px;letter-spacing:.07em;font-weight:750;}
+.demg-root .metrics-strip {background:#eff4f9;border-bottom:1px solid #e1e9f0;}
+.demg-root .metrics-inner {display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0;}
+.demg-root .metric {padding:3px 25px;border-right:1px solid #d3dfec;}
+.demg-root .metric:first-child {padding-left:0;}
+.demg-root .metric:last-child{border-right:0;}
+.demg-root .metric b{display:block;font-family:Georgia,serif;color:#1d4674;font-size:21px;line-height:1.35;font-weight:500;}
+.demg-root .metric span{color:#66788a;font-size:12px;}
+.demg-root section.content-section{padding:91px 0;scroll-margin-top:15px;}
+.demg-root .section-eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#32699b;margin:0 0 12px;}
+.demg-root h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,3.4vw,47px);font-weight:500;letter-spacing:-.026em;line-height:1.19;margin-bottom:21px;color:#122d4b;}
+.demg-root .section-desc{color:#63768a;max-width:710px;font-size:16px;line-height:1.85;margin-bottom:0;}
+.demg-root .intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:start;}
+.demg-root .mission-copy{border-left:2px solid #b9cfe1;padding-left:30px;}
+.demg-root .mission-copy p{font-size:16px;color:#40566c;line-height:1.9;margin-bottom:17px;}
+.demg-root .mission-copy strong{color:#184b80;}
+.demg-root .themes{background:#f5f8fc;}
+.demg-root .section-headrow{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:37px;}
+.demg-root .section-headrow .section-desc{max-width:590px;}
+.demg-root .theme-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.demg-root .theme-card{background:white;border:1px solid #e3eaf2;border-radius:9px;min-height:235px;padding:30px 27px 26px;transition:transform .15s,box-shadow .15s;}
+.demg-root .theme-card:hover{transform:translateY(-3px);box-shadow:0 9px 26px rgba(20,58,98,.08);}
+.demg-root .theme-no {font-family:Georgia,serif;color:#b48c4e;font-size:24px;line-height:1;margin:0 0 23px;}
+.demg-root h3{color:#173a5e;font-size:18px;line-height:1.4;font-weight:750;margin-bottom:11px;}
+.demg-root .theme-card p{font-size:13px;line-height:1.75;color:#66788a;margin:0;}
+.demg-root .process{background:#fff;}
+.demg-root .process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:35px;border-top:1px solid #d7e2ec;border-bottom:1px solid #d7e2ec;}
+.demg-root .process-step{padding:28px 23px 28px 0;margin-right:22px;border-right:1px solid #d7e2ec;}
+.demg-root .process-step:last-child{margin-right:0;border-right:0;}
+.demg-root .process-step .num{font-family:Georgia,serif;font-size:36px;line-height:1.2;color:#b99659;margin-bottom:13px;}
+.demg-root .process-step h3{font-size:15px;margin-bottom:8px;}
+.demg-root .process-step p{color:#6f8090;font-size:13px;line-height:1.7;margin:0;}
+.demg-root .research-directions{margin-top:45px;background:linear-gradient(115deg,#edf4fa,#f8fbff);padding:29px 34px;border-radius:9px;border-left:4px solid #3b77aa;display:grid;grid-template-columns:1fr 2fr;gap:27px;align-items:center;}
+.demg-root .research-directions h3{font-family:Georgia,serif;font-size:25px;font-weight:500;margin:0;}
+.demg-root .research-directions p{margin:0;color:#53687e;font-size:14px;line-height:1.85;}
+.demg-root .people{background:#f5f8fc;}
+.demg-root .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:34px;}
+.demg-root .person-card{background:#fff;border:1px solid #e0e9f2;border-radius:9px;padding:28px 27px 25px;}
+.demg-root .person-initial{height:55px;width:55px;display:grid;place-items:center;border-radius:50%;background:#e5f0f8;color:#20598d;font-family:Georgia,serif;font-size:23px;margin-bottom:22px;}
+.demg-root .person-role{font-size:11px;font-weight:750;text-transform:uppercase;letter-spacing:.09em;color:#957445;display:block;margin-bottom:7px;}
+.demg-root .person-card h3{font-size:19px;margin-bottom:5px;}
+.demg-root .person-card p{font-size:13px;color:#64788b;line-height:1.65;min-height:40px;}
+.demg-root .text-link{display:inline-flex;gap:6px;align-items:center;font-size:12px;font-weight:750;color:#276396!important;border-bottom:1px solid #cbd9e8;padding-bottom:3px;}
+.demg-root .people-note{margin-top:23px;color:#66798c;font-size:12px;line-height:1.7;}
+.demg-root .pubs-list{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:34px;}
+.demg-root .pub-card{padding:25px 27px;border:1px solid #dfe7f0;border-radius:8px;background:#fff;display:flex;flex-direction:column;min-height:205px;}
+.demg-root .pub-meta{font-size:11px;text-transform:uppercase;font-weight:750;letter-spacing:.105em;color:#ae8748;margin-bottom:10px;}
+.demg-root .pub-card h3{font-family:Georgia,serif;font-weight:500;font-size:20px;line-height:1.41;margin-bottom:9px;}
+.demg-root .pub-card p{font-size:12px;line-height:1.6;color:#64778a;margin-bottom:20px;}
+.demg-root .pub-card .text-link{margin-top:auto;align-self:flex-start;}
+.demg-root .pub-more{margin-top:24px;}
+.demg-root .activities{background:#f5f8fc;}
+.demg-root .activity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px;}
+.demg-root .activity-card{padding:28px;background:white;border:1px solid #e1e9f1;border-top:3px solid #b89557;border-radius:6px;min-height:235px;display:flex;flex-direction:column;align-items:flex-start;}
+.demg-root .activity-kind{font-size:10px;letter-spacing:.11em;color:#ac874d;font-weight:800;text-transform:uppercase;margin-bottom:18px;}
+.demg-root .activity-card h3{font-size:17px;margin-bottom:10px;}
+.demg-root .activity-card p{font-size:13px;color:#61768a;line-height:1.7;margin-bottom:18px;}
+.demg-root .activity-card .text-link{margin-top:auto;}
+.demg-root .contact{background:#102e4d;color:#fff;padding:65px 0;}
+.demg-root .contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;}
+.demg-root .contact h2{color:#fff;margin-bottom:15px;}
+.demg-root .contact p{color:#c3d5e6;line-height:1.85;max-width:650px;margin:0;}
+.demg-root .contact-info{padding-left:35px;border-left:1px solid #466482;}
+.demg-root .contact-info strong{display:block;color:#fff;font-size:15px;}
+.demg-root .contact-info a{display:block;color:#9cdaff;margin-top:8px;font-size:15px;overflow-wrap:anywhere;}
+.demg-root .contact-info p{font-size:12px;margin-top:9px;}
+.demg-root .footer{background:#081727;color:#90a9c0;font-size:12px;padding:25px 0;}
+.demg-root .footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.demg-root .footer a{color:#d5e5f0;}
+@media (max-width:1040px){.demg-root .navinner{flex-direction:column;justify-content:center;align-items:flex-start;padding:20px 0;gap:12px;}.demg-root .navlinks{justify-content:flex-start;}.demg-root .hero-inner{grid-template-columns:1fr 1fr;gap:24px;padding:70px 0;}.demg-root h1{font-size:clamp(39px,5vw,55px);}.demg-root .intro-grid{gap:45px;}}
+@media (max-width:760px){.demg-root .container{width:min(100% - 36px,620px);}.demg-root .topline .container{flex-direction:column;gap:1px;}.demg-root .navlinks{gap:13px 21px;}.demg-root .navlinks .nav-contact{padding:7px 11px;}.demg-root .hero-inner,.demg-root .intro-grid,.demg-root .contact-grid{grid-template-columns:1fr;}.demg-root .hero-inner{padding:62px 0 70px;}.demg-root h1{font-size:clamp(41px,9vw,62px);}.demg-root .science-panel{margin-top:10px;}.demg-root .metrics-inner{grid-template-columns:1fr;gap:11px;padding:20px 0;}.demg-root .metric,.demg-root .metric:first-child{padding:0 0 11px;border-bottom:1px solid #d5e0ec;border-right:0;}.demg-root .metric:last-child{border-bottom:0;padding:0;}.demg-root section.content-section{padding:69px 0;}.demg-root .theme-grid,.demg-root .people-grid,.demg-root .activity-grid{grid-template-columns:1fr 1fr;}.demg-root .process-grid{grid-template-columns:1fr 1fr;}.demg-root .process-step:nth-child(2){border-right:0;margin-right:0;}.demg-root .process-step:nth-child(-n+2){border-bottom:1px solid #d7e2ec;}.demg-root .research-directions{grid-template-columns:1fr;}.demg-root .contact-info{padding-left:0;border-left:0;border-top:1px solid #466482;padding-top:24px;}}
+@media (max-width:520px){.demg-root .theme-grid,.demg-root .people-grid,.demg-root .pubs-list,.demg-root .activity-grid{grid-template-columns:1fr;}.demg-root .process-grid{grid-template-columns:1fr;}.demg-root .process-step,.demg-root .process-step:nth-child(2){margin-right:0;border-right:0;border-bottom:1px solid #d7e2ec;}.demg-root .process-step:last-child{border-bottom:0;}.demg-root .navlinks{font-size:12px;}.demg-root .hero-intro{font-size:15px;}.demg-root .footer .container{flex-direction:column;}}
+@media (prefers-reduced-motion:reduce){.demg-root *{transition:none!important;}}
+
+</style>
+</head>
+<body>
+<main class="demg-root" id="demg-top">
+  <div class="demo-notice">Website concept preview · Review proposed group membership and secure CTPNP approval before publishing</div>
+  <div class="topline"><div class="container"><span>Centre for Theoretical Physics &amp; Natural Philosophy</span><a href="https://na.mahidol.ac.th/nas2020/">Mahidol University · Nakhon Sawan Campus</a></div></div>
+  <header class="navigation"><div class="container navinner"><a class="logoarea" href="#demg-top" aria-label="DEMG topical group home"><span class="monogram">Λ</span><span><span class="brand-main" style="display:block">DEMG <span style="color:#9cacc0;font-weight:500">/ CTPNP</span></span><span class="brand-sub" style="display:block">Dark Energy &amp; Modified Gravity</span></span></a><nav class="navlinks" aria-label="Topical group navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a href="#activities">Activities</a><a class="nav-contact" href="#collaborate">Collaborate</a></nav></div></header>
+  <section class="hero" aria-labelledby="hero-title"><div class="container hero-inner"><div><p class="eyebrow">Cosmology &amp; fundamental gravity</p><h1 id="hero-title">Dark Energy<br>&amp; Modified<br>Gravity</h1><p class="hero-intro">Exploring the physics of cosmic acceleration through theoretical models, dynamical systems, perturbation theory, and precision cosmological observations.</p><div class="hero-actions"><a class="btn btn-light" href="#research">Explore our research <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#publications">Selected publications</a></div></div>
+  <div class="science-panel"><p class="panel-kicker"><span>A question at the frontier</span><span>Theory + data</span></p><p class="panel-title">Is cosmic acceleration a clue to physics beyond ΛCDM?</p><div class="chart-visual"><svg role="img" aria-label="Schematic equation-of-state curve near the phantom divide w equals minus one; illustration only, not observational data" viewBox="0 0 410 270" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="demgCurve" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#73cce4"/><stop offset="1" stop-color="#e6c48b"/></linearGradient></defs><g stroke="#23425c" stroke-width="1"><path d="M48 35H387 M48 78H387 M48 121H387 M48 164H387 M48 207H387"/><path d="M105 28V227 M178 28V227 M251 28V227 M324 28V227"/></g><g stroke="#a4bad0" stroke-width="1.2"><path d="M48 28V227H390" fill="none"/></g><path d="M48 144H390" stroke="#e7b878" stroke-width="1.3" stroke-dasharray="7 7" opacity=".9"/><g font-family="Arial,sans-serif" fill="#b9cede" font-size="11"><text x="9" y="27">w(z)</text><text x="20" y="147">−1</text><text x="37" y="244">2</text><text x="209" y="244">z</text><text x="375" y="244">0</text><text x="255" y="137" fill="#eac18e">w = −1</text><text x="61" y="54" fill="#acc6d7">Quintessence-like</text><text x="61" y="191" fill="#acc6d7">Phantom-like</text></g><path d="M50 106 C104 75,142 91,176 118 S238 170,284 157 S353 115,388 92" fill="none" stroke="url(#demgCurve)" stroke-width="3.5" stroke-linecap="round"/><circle cx="216" cy="145" r="5" fill="#f1d19b" stroke="#0b2a45" stroke-width="2"/></svg></div><p class="plot-note">Schematic illustration of an evolving equation of state — not a fit to data.</p><div class="data-pills" aria-label="Observational probes"><span>BAO / DESI</span><span>Supernovae</span><span>CMB</span><span>Structure growth</span></div></div></div></section>
+  <div class="metrics-strip"><div class="container metrics-inner"><div class="metric"><b>Physical mechanisms</b><span>Scalar fields, interactions, modified gravity</span></div><div class="metric"><b>Mathematical consistency</b><span>Background evolution and perturbative stability</span></div><div class="metric"><b>Observational tests</b><span>BAO, SNe Ia, CMB and large-scale structure</span></div></div></div>
+  <section class="content-section" id="about"><div class="container intro-grid"><div><p class="section-eyebrow">01 / About the group</p><h2>Understanding the accelerating Universe</h2><p class="section-desc">An interdisciplinary meeting point for gravitational theory and data-driven cosmology.</p></div><div class="mission-copy"><p>The nature of the component responsible for the present accelerated expansion remains one of the central open questions in fundamental physics. While the cosmological-constant model provides a remarkably successful baseline, observations motivate careful tests of dynamical dark energy and possible modifications of general relativity.</p><p>Our proposed topical group brings together <strong>theoretical development, analytical stability analysis, and statistical inference</strong> to investigate which alternative models are physically viable and observationally distinguishable.</p><p>We aim to foster collaborations, train early-career researchers, and connect the CTPNP research community with international work on cosmology and gravitation.</p></div></div></section>
+  <section class="content-section themes" id="research"><div class="container"><div class="section-headrow"><div><p class="section-eyebrow">02 / Research</p><h2>Research themes</h2><p class="section-desc">From fundamental field theories to precision constraints, our interests span complementary approaches to the dark-energy problem.</p></div></div><div class="theme-grid">
+    <article class="theme-card"><p class="theme-no">01</p><h3>Dynamical dark energy</h3><p>Quintessence, phantom, quintom, k-essence, and tracker fields, including the conditions for genuine or effective phantom-divide crossing.</p></article>
+    <article class="theme-card"><p class="theme-no">02</p><h3>Modified gravity</h3><p>Scalar–tensor and scalar–vector–tensor theories, gravitational couplings, screening mechanisms, and tests of gravity on cosmological scales.</p></article>
+    <article class="theme-card"><p class="theme-no">03</p><h3>Interacting dark sectors</h3><p>Energy and momentum exchange between dark matter and dark energy, late-time attractors, and implications for cosmic expansion and structure growth.</p></article>
+    <article class="theme-card"><p class="theme-no">04</p><h3>Cosmological tensions</h3><p>Investigating the Hubble and structure-growth tensions and assessing whether new physics can improve agreement among different cosmological probes.</p></article>
+    <article class="theme-card"><p class="theme-no">05</p><h3>Dynamical systems &amp; stability</h3><p>Phase-space analysis, fixed points, bifurcations, no-ghost and gradient-stability conditions, and the evolution of cosmological perturbations.</p></article>
+    <article class="theme-card"><p class="theme-no">06</p><h3>Cosmological inference</h3><p>Numerical background and perturbation solvers, Bayesian parameter estimation, and observational tests using modern survey likelihoods.</p></article>
+  </div></div></section>
+  <section class="content-section process" id="approach"><div class="container"><p class="section-eyebrow">03 / Our approach</p><h2>From equations to evidence</h2><p class="section-desc">We place physical consistency and observational evaluation within a single research workflow.</p><div class="process-grid"><div class="process-step"><p class="num">1</p><h3>Build a model</h3><p>Specify the action, interactions, background equations and physical assumptions.</p></div><div class="process-step"><p class="num">2</p><h3>Test stability</h3><p>Study phase-space behavior and identify viable perturbative conditions.</p></div><div class="process-step"><p class="num">3</p><h3>Compute observables</h3><p>Implement cosmological evolution and calculate distances and growth observables.</p></div><div class="process-step"><p class="num">4</p><h3>Confront data</h3><p>Use modern surveys and Bayesian methods to compare models rigorously.</p></div></div><div class="research-directions"><h3>Current scientific questions</h3><p>Can dark energy cross the phantom divide consistently? How can modified gravity mimic such crossing? Which observables can distinguish interactions or departures from general relativity from a simple dynamical equation of state?</p></div></div></section>
+  <section class="content-section people" id="people"><div class="container"><p class="section-eyebrow">04 / People</p><h2>Researchers and community</h2><p class="section-desc">CTPNP researchers and research students working on dark energy, modified gravity, and cosmology. Roles and membership are subject to the centre’s approval before publication.</p><div class="people-grid">
+    <article class="person-card"><div class="person-initial" aria-hidden="true">NR</div><span class="person-role">Research contact · CTPNP</span><h3>Dr Nandan Roy</h3><p>Cosmology, dark energy, general relativity, dynamical systems and observational constraints.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/personal-page-of-nandan-roy/">Research profile <span aria-hidden="true">↗</span></a></article>
+    <article class="person-card"><div class="person-initial" aria-hidden="true">BG</div><span class="person-role">CTPNP director</span><h3>Prof Burin Gumjudpai</h3><p>Gravity and cosmology, modified gravity, holographic cosmology and dark energy.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/burin-gumjudpai/">Research profile <span aria-hidden="true">↗</span></a></article>
+    <article class="person-card"><div class="person-initial" aria-hidden="true">AT</div><span class="person-role">Group member · CTPNP</span><h3>Dr Amornthep Tita</h3><p>Holographic dark energy, non-minimal derivative coupling gravity, and cosmological dynamics.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/wp-content/uploads/2024/03/2024Dynamics-of-holographic-dark-energy-with-apparent-horizon-cutoff-and-non-minimal-derivative-coupling-gravity-in-non-flat-FLRW-universe_HighProf7.pdf">Related publication <span aria-hidden="true">↗</span></a></article>
+    <article class="person-card"><div class="person-initial" aria-hidden="true">PB</div><span class="person-role">Graduate researcher · CTPNP</span><h3>Phichayoot Baisri</h3><p>Scalar-field cosmology, modified gravity, tracker k-essence, and cosmological constraints.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/publications-2026/">CTPNP publications <span aria-hidden="true">↗</span></a></article>
+    <article class="person-card"><div class="person-initial" aria-hidden="true">PT</div><span class="person-role">Research student · CTPNP</span><h3>Phusuda Thanankullaphong</h3><p>Quintom dark energy, late-time attractors, phantom crossing and cosmological observations.</p><a class="text-link" href="https://journals.aps.org/prd/abstract/10.1103/4b1x-6pcx">Related publication <span aria-hidden="true">↗</span></a></article>
+  </div><p class="people-note">Group roster updated at the request of the group contact; institutional approval and final role labels should be confirmed before public publication.</p></div></section>
+  <section class="content-section" id="publications"><div class="container"><p class="section-eyebrow">05 / Selected work</p><h2>Recent publications</h2><p class="section-desc">Examples of peer-reviewed work connected to the proposed group's research themes.</p><div class="pubs-list">
+    <article class="pub-card"><div class="pub-meta">2026 · Physical Review D</div><h3>Quintom dark energy: Future attractor and phantom crossing in light of DESI DR2 observations</h3><p>P. Thanankullaphong, P. Sahoo, P. H. Puttasiddappa &amp; N. Roy · 113, 084069</p><a class="text-link" href="https://doi.org/10.1103/4b1x-6pcx">View published paper <span aria-hidden="true">↗</span></a></article>
+    <article class="pub-card"><div class="pub-meta">2026 · European Physical Journal C</div><h3>Is phantom barrier crossing inevitable? A cosmographic analysis</h3><p>N. Roy &amp; S. Chakrabarti · 86, 586</p><a class="text-link" href="https://doi.org/10.1140/epjc/s10052-026-15803-z">View published paper <span aria-hidden="true">↗</span></a></article>
+    <article class="pub-card"><div class="pub-meta">2026 · European Physical Journal C</div><h3>Constraint on momentum-transferred dark energy using DESI DR2</h3><p>P. Sahoo, N. Roy &amp; H. S. Mondal · 86, 200</p><a class="text-link" href="https://doi.org/10.1140/epjc/s10052-026-15341-8">View published paper <span aria-hidden="true">↗</span></a></article>
+    <article class="pub-card"><div class="pub-meta">2025 · Physics of the Dark Universe</div><h3>Dynamical dark energy in the light of DESI 2024 data</h3><p>N. Roy · 48, 101912</p><a class="text-link" href="https://arxiv.org/abs/2406.00634">Read on arXiv <span aria-hidden="true">↗</span></a></article>
+  </div><p class="pub-more"><a class="btn btn-navy" href="https://murex.mahidol.ac.th/en/organisations/center-for-theoretical-physics-and-natural-philosophy/publications/">Browse CTPNP research output <span aria-hidden="true">↗</span></a></p></div></section>
+  <section class="content-section activities" id="activities"><div class="container"><p class="section-eyebrow">06 / Academic life</p><h2>Seminars, schools &amp; exchange</h2><p class="section-desc">Research grows through discussion, training and sustained international connections.</p><div class="activity-grid"><article class="activity-card"><div class="activity-kind">Seminar series</div><h3>Thailand Gravity &amp; Cosmology Seminar Series</h3><p>A collaborative platform for discussion across cosmology, gravitational theory and related fields.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/thailand-gravity-cosmology-seminar-series/">View programme <span aria-hidden="true">↗</span></a></article><article class="activity-card"><div class="activity-kind">Advanced training · 2026</div><h3>The Sixth Tah Poe School on Cosmology</h3><p>Lectures and discussion on cosmological dynamics, observations, dark energy and modified gravity.</p><a class="text-link" href="https://na.mahidol.ac.th/nas2020/tpcosmo-vi/">School information <span aria-hidden="true">↗</span></a></article><article class="activity-card"><div class="activity-kind">Proposed group activities</div><h3>Research meetings &amp; reading sessions</h3><p>A space for graduate students and researchers to present progress, discuss papers and develop joint projects.</p><a class="text-link" href="mailto:nandan.roy@mahidol.ac.th?subject=DEMG%20research%20discussion">Contact for information <span aria-hidden="true">↗</span></a></article></div></div></section>
+  <section class="contact" id="collaborate"><div class="container contact-grid"><div><p class="section-eyebrow" style="color:#9ad3eb">07 / Join the conversation</p><h2>Research connects people.</h2><p>We welcome scientific inquiries from prospective collaborators, interested graduate students, and visiting researchers working at the interface of dark energy, modified gravity, and cosmological observations. This preview does not constitute a current vacancy announcement.</p></div><div class="contact-info"><strong>Research contact</strong><a href="mailto:nandan.roy@mahidol.ac.th?subject=Dark%20Energy%20and%20Modified%20Gravity%20Topical%20Group">nandan.roy@mahidol.ac.th</a><p>Centre for Theoretical Physics &amp; Natural Philosophy<br>Mahidol University, Nakhon Sawan, Thailand</p></div></div></section>
+  <footer class="footer"><div class="container"><span>© 2026 DEMG website concept · CTPNP, Mahidol University</span><span><a href="https://na.mahidol.ac.th/nas2020/">CTPNP main website</a> · Editorial preview; not yet an official group page</span></div></footer>
+</main>
+</body>
+</html>
